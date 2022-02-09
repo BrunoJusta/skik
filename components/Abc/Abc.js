@@ -7,7 +7,11 @@ const Abc = (props) => {
   return (
     <div className={styles.container} style={{ fontWeight: weight }}>
       <div style={{ display: "none" }}>
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+          className="filters"
+        >
           <defs>
             <filter id="blur0">
               <feGaussianBlur in="SourceGraphic" stdDeviation="0,0" />

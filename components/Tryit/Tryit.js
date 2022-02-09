@@ -26,9 +26,7 @@ const Tryit = (props) => {
         <button onClick={() => setWeight("100")} type="button" autofocus>
           Light
         </button>
-        <button autofocus onClick={() => setWeight("400")}>
-          Normal
-        </button>
+        <button onClick={() => setWeight("400")}>Normal</button>
         <button onClick={() => setWeight("600")}>Bold</button>
         <button onClick={() => setWeight("800")}>Black</button>
       </div>
@@ -37,10 +35,10 @@ const Tryit = (props) => {
         style={{ fontWeight: weight }}
         type="text"
         name="skik"
-        autocomplete="off"
+        autoComplete="off"
         placeholder="you aint cool if you aint skik"
-        onfocus="this.placeholder = ''"
-        maxlength="30"
+        onFocus="this.placeholder = ''"
+        maxLength="30"
         size="10"
       ></input>
     </div>
