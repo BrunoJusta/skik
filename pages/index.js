@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Abc } from "../components/Abc";
+import { Creator } from "../components/Creator";
 import { FontWeight } from "../components/FontWeight";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
@@ -21,6 +22,8 @@ export default function Home() {
       <FontWeight />
       <Tryit />
       <Abc />
+
+      <Creator />
 
       <Footer />
     </div>
