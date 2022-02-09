@@ -6,7 +6,7 @@ const Footer = (props) => {
 
   return (
     <div className={styles.footer}>
-      <p>skik® - All rights reseved</p>
+      <p>2022 skik® - All rights reseved</p>
       <p>by Bruno Justa & João Vasconcelos</p>
     </div>
   );
