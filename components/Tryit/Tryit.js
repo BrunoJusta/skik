@@ -23,7 +23,7 @@ const Tryit = (props) => {
   return (
     <div className={styles.tryit}>
       <div className={styles.controls}>
-        <button onClick={() => setWeight("100")} type="button" autofocus>
+        <button onClick={() => setWeight("100")} type="button" autoFocus>
           Light
         </button>
         <button onClick={() => setWeight("400")}>Normal</button>
