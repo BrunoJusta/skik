@@ -1,0 +1,13 @@
+.footer {
+  bottom: 0;
+  padding: 1rem;
+  min-width: 1340px;
+  display: flex;
+  justify-content: space-between;
+  p {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #282828;
+  }
+}

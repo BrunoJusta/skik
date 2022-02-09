@@ -1,0 +1,67 @@
+.container {
+  padding: 1rem;
+  color: #282828;
+  font-family: Poppins;
+  display: flex;
+  min-width: 1240px;
+  justify-content: space-between;
+  margin-bottom: 100px;
+
+  h3 {
+    font-size: 6rem;
+    padding-bottom: 16px;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+
+  .light {
+    padding: 1.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 200;
+    background-color: white;
+  }
+
+  .normal {
+    padding: 1.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    background-color: white;
+  }
+
+  .bold {
+    padding: 1.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: white;
+  }
+
+  .black {
+    padding: 1.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 900;
+    background-color: white;
+  }
+}
