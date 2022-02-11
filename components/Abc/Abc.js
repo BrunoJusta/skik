@@ -3,9 +3,17 @@ import { useState, useEffect, useRef } from "react";
 
 const Abc = (props) => {
   const [weight, setWeight] = useState("100");
-
+  const [pts, setPoints] = useState("40");
+  const points = useRef();
+  const ini = useRef();
+  const handleChange = () => {
+    setPoints(points.current.value);
+  };
   return (
-    <div className={styles.container} style={{ fontWeight: weight }}>
+    <div
+      className={styles.container}
+      style={{ fontWeight: weight, fontSize: `${pts}pt` }}
+    >
       <div style={{ display: "none" }}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -37,12 +45,24 @@ const Abc = (props) => {
           </defs>
         </svg>
       </div>
-      <div className={styles.controls}>
-        <button onClick={() => setWeight("100")}>Light</button>
-        <button onClick={() => setWeight("400")}>Normal</button>
-        <button onClick={() => setWeight("600")}>Bold</button>
-        <button onClick={() => setWeight("800")}>Black</button>
+      <div className={styles.supacontrols}>
+        <div className={styles.controls}>
+          <button onClick={() => setWeight("100")}>Light</button>
+          <button onClick={() => setWeight("400")}>Normal</button>
+          <button onClick={() => setWeight("600")}>Bold</button>
+          <button onClick={() => setWeight("800")}>Black</button>
+        </div>
+        <input
+          className={styles.range}
+          type="range"
+          ref={points}
+          name="pt"
+          min="12"
+          max="40"
+          onChange={() => handleChange()}
+        />
       </div>
+
       <div className={styles.section}>
         <div className={styles.letter}>a</div>
         <div className={styles.letter}>b</div>

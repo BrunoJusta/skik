@@ -8,6 +8,7 @@ const Intro = (props) => {
     <div className={styles.container}>
       <div className={styles.firstSection}>
         <div className={styles.text}>
+          <span className={styles.king} />
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
@@ -28,16 +29,29 @@ const Intro = (props) => {
           </p>
         </div>
         <div className={styles.gallery}>
-          <div className={styles.image1}></div>
-          <div className={styles.image2}></div>
-          <div className={styles.image3}></div>
-          <div className={styles.image4}></div>
+          <div className={styles.row}>
+            <div className={styles.image1}></div>
+            <div className={styles.image2}></div>
+          </div>
+          <div className={styles.row}>
+            <div className={styles.image3}></div>
+            <div className={styles.image4}></div>
+          </div>
         </div>
       </div>
       <div className={styles.secondSection}>
         <h2>optical ajustments</h2>
+        <div className={styles.gallery}>
+          <div className={styles.ajust1}></div>
+          <div className={styles.ajust2}></div>
+          <div className={styles.ajust3}></div>
+        </div>
       </div>
-      <div className={styles.thirdSection}></div>
+      <div className={styles.thirdSection}>
+        <h2>dimensions</h2>
+        <div className={styles.xsize}></div>
+        <h2>weights</h2>
+      </div>
     </div>
   );
 };

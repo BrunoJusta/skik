@@ -3,35 +3,203 @@
   font-family: Poppins;
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
+  max-width: 1280px;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+
   justify-content: center;
-  margin-bottom: 100px;
   align-items: center;
+  flex-wrap: wrap;
 
   .firstSection {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     margin-bottom: 100px;
+    gap: 2rem;
+
     .text {
-      width: 40%;
+      width: 100%;
       font-weight: 300;
       font-size: 1rem;
       display: flex;
       flex-direction: column;
       line-height: 130%;
       gap: 10px;
+      .king {
+        background-color: #f0d453;
+        height: 4px;
+        width: 80px;
+      }
     }
 
     .gallery {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+      }
+
+      .image1 {
+        width: 183px;
+        height: 183px;
+        background-image: url("../public/image1.png");
+        background-size: 100%;
+        background-position: center;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-size: 110%;
+        }
+      }
+      .image2 {
+        width: 183px;
+        height: 183px;
+        background-image: url("../public/image2.png");
+        background-size: 100%;
+        background-position: center;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-size: 110%;
+        }
+      }
+      .image3 {
+        width: 183px;
+        height: 183px;
+        background-image: url("../public/image3.png");
+        background-size: 100%;
+        background-position: center;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-size: 110%;
+        }
+      }
+      .image4 {
+        width: 183px;
+        height: 183px;
+        background-image: url("../public/image4.png");
+        background-size: 100%;
+        background-position: center;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-size: 110%;
+        }
+      }
     }
   }
   .secondSection {
+    width: 100%;
+    height: 100%;
+
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     h2 {
       font-weight: 600;
       font-size: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .gallery {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 100px;
+
+      .ajust1 {
+        width: 100%;
+        height: 400px;
+        background-image: url("../public/ajust1.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        transition: all 0.3s ease-in-out;
+        background-position: center;
+        &:hover {
+          background-size: 110%;
+        }
+      }
+      .ajust2 {
+        width: 100%;
+
+        height: 400px;
+        background-image: url("../public/ajust2.png");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-size: 110%;
+        }
+      }
+      .ajust3 {
+        width: 100%;
+        background-repeat: no-repeat;
+
+        height: 400px;
+        background-image: url("../public/ajust3.png");
+        background-size: 100%;
+        background-position: center;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-size: 110%;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 770px) {
+      .gallery {
+        flex-wrap: wrap;
+      }
     }
   }
   .thirdSection {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      font-weight: 600;
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .xsize {
+      width: 100%;
+      height: 200px;
+      background-image: url("../public/xsize.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-bottom: 100px;
+    }
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .firstSection {
+    flex-direction: column;
+  }
+  .text {
+    margin-bottom: 2rem;
   }
 }

@@ -8,19 +8,19 @@ const FontWeight = (props) => {
     <div className={styles.container}>
       <div className={styles.light}>
         <h3>Aa</h3>
-        <p>Light</p>
+        <p>skik light</p>
       </div>
       <div className={styles.normal}>
         <h3>Aa</h3>
-        <p>Normal</p>
+        <p>skik normal</p>
       </div>
       <div className={styles.bold}>
         <h3>Aa</h3>
-        <p>Bold</p>
+        <p>skik bold</p>
       </div>
       <div className={styles.black}>
         <h3>Aa</h3>
-        <p>Black</p>
+        <p>skik black</p>
       </div>
     </div>
   );
