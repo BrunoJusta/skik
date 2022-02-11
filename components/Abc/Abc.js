@@ -44,88 +44,32 @@ const Abc = (props) => {
         <button onClick={() => setWeight("800")}>Black</button>
       </div>
       <div className={styles.section}>
-        <div className={styles.letter}>
-          <h3>a</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>b</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>c</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>d</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>e</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>f</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>g</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>h</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>i</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>j</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>k</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>l</h3>
-        </div>
-      </div>
-      <div className={styles.section}>
-        <div className={styles.letter}>
-          <h3>m</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>n</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>o</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>p</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>q</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>r</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>s</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>t</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>u</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>v</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>w</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>x</h3>
-        </div>
-      </div>
-      <div className={styles.lastSection}>
-        <div className={styles.letter}>
-          <h3>y</h3>
-        </div>
-        <div className={styles.letter}>
-          <h3>z</h3>
-        </div>
+        <div className={styles.letter}>a</div>
+        <div className={styles.letter}>b</div>
+        <div className={styles.letter}>c</div>
+        <div className={styles.letter}>d</div>
+        <div className={styles.letter}>e</div>
+        <div className={styles.letter}>f</div>
+        <div className={styles.letter}>g</div>
+        <div className={styles.letter}>h</div>
+        <div className={styles.letter}>i</div>
+        <div className={styles.letter}>j</div>
+        <div className={styles.letter}>k</div>
+        <div className={styles.letter}>l</div>
+        <div className={styles.letter}>m</div>
+        <div className={styles.letter}>n</div>
+        <div className={styles.letter}>o</div>
+        <div className={styles.letter}>p</div>
+        <div className={styles.letter}>q</div>
+        <div className={styles.letter}>r</div>
+        <div className={styles.letter}>s</div>
+        <div className={styles.letter}>t</div>
+        <div className={styles.letter}>u</div>
+        <div className={styles.letter}>v</div>
+        <div className={styles.letter}>w</div>
+        <div className={styles.letter}>x</div>
+        <div className={styles.letter}>y</div>
+        <div className={styles.letter}>z</div>
       </div>
     </div>
   );

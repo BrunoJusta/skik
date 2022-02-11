@@ -1,10 +1,12 @@
 .container {
-  padding: 1rem;
   color: #282828;
   font-family: Poppins;
   display: flex;
-  min-width: 1240px;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
   margin-bottom: 100px;
 
   h3 {
@@ -16,9 +18,8 @@
   }
 
   .light {
-    padding: 1.5rem;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    width: 250px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,9 +29,8 @@
   }
 
   .normal {
-    padding: 1.5rem;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    width: 250px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,9 +40,8 @@
   }
 
   .bold {
-    padding: 1.5rem;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    width: 250px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,9 +52,8 @@
   }
 
   .black {
-    padding: 1.5rem;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    width: 250px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;

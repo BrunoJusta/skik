@@ -2,68 +2,134 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 350px;
-  height: 350px;
-  transition: all 500ms ease-in-out;
+  width: 100%;
+  margin-bottom: 100px;
 
-  .yellow {
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    border-radius: 100%;
-    border: 4px solid #f0d453;
-    transition: all 500ms ease-in-out;
-  }
+  .masksHolder {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
 
-  .maskmask {
-    position: absolute;
-    z-index: 200;
-    transition: all 500ms ease-in-out;
+    .creator {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
 
-    .mask {
-      width: 150px;
-      height: 200px;
-      background-image: url("../public/mask.png");
-      background-size: cover;
-      transition: all 800ms cubic-bezier(0.645, 0.045, 0.335, 1);
-      animation: slide-top 4s cubic-bezier(0.645, 0.045, 0.335, 1) infinite
-        alternate-reverse both;
-    }
-  }
+      .description {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
 
-  .justa {
-    width: 92%;
-    height: 92%;
-    background-image: url("../public/justa.png");
-    background-size: cover;
-    border-radius: 100%;
-    z-index: 0;
-    transition: all 500ms ease-in-out;
-  }
-  .joao {
-    width: 92%;
-    height: 92%;
-    background-image: url("../public/joao.png");
-    background-size: cover;
-    border-radius: 100%;
-    z-index: 0;
-    transition: all 500ms ease-in-out;
-  }
+        h3 {
+          font-family: Poppins;
+          font-size: 1.4rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+          color: #282828;
+        }
 
-  &:hover .maskmask {
-    transform: translateX(100px);
-  }
+        .social {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
 
-  &:hover .yellow {
-    transform: scale(1.1);
-  }
+          p {
+            display: flex;
+            font-size: 1.5rem;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            color: #282828;
+            padding: 8px;
+            border-radius: 100%;
 
-  @keyframes slide-top {
-    0% {
-      transform: translateY(-30%);
-    }
-    100% {
-      transform: translateY(-40%);
+            &:hover {
+              background-color: #f0d453;
+              box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.08);
+            }
+          }
+        }
+      }
+
+      .maskMaster {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+        height: 350px;
+        transition: all 500ms ease-in-out;
+
+        .yellowBorder {
+          position: absolute;
+          width: 350px;
+          height: 350px;
+          border-radius: 100%;
+          border: 4px solid #f0d453;
+          transition: all 500ms ease-in-out;
+        }
+
+        .mask {
+          position: absolute;
+          z-index: 100;
+          transition: all 500ms ease-in-out;
+
+          .maskmask {
+            width: 150px;
+            height: 200px;
+            background-image: url("../public/mask.png");
+            background-size: cover;
+            transition: all 800ms cubic-bezier(0.645, 0.045, 0.335, 1);
+            animation: slide-top 4s cubic-bezier(0.645, 0.045, 0.335, 1)
+              infinite alternate-reverse both;
+          }
+        }
+
+        .justa {
+          width: 92%;
+          height: 92%;
+          background-image: url("../public/justa.png");
+          background-size: cover;
+          border-radius: 100%;
+          z-index: 0;
+          transition: all 500ms ease-in-out;
+        }
+        .joao {
+          width: 92%;
+          height: 92%;
+          background-image: url("../public/joao.png");
+          background-size: cover;
+          border-radius: 100%;
+          z-index: 0;
+          transition: all 500ms ease-in-out;
+        }
+
+        &:hover .mask {
+          transform: translateX(100px) rotate(12deg);
+        }
+
+        &:hover .masker {
+          transform: translateY(-80px);
+        }
+
+        &:hover .yellowBorder {
+          transform: scale(1.1);
+        }
+
+        @keyframes slide-top {
+          0% {
+            transform: translateY(-30%);
+          }
+          100% {
+            transform: translateY(-40%);
+          }
+        }
+      }
     }
   }
 }

@@ -5,6 +5,7 @@ import { Creator } from "../components/Creator";
 import { FontWeight } from "../components/FontWeight";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import { Intro } from "../components/Intro";
 import { Tag } from "../components/Tag";
 import { Tryit } from "../components/Tryit";
 import styles from "../styles/Home.module.css";
@@ -19,6 +20,7 @@ export default function Home() {
       </Head>
       <Tag />
       <Header />
+      <Intro />
       <FontWeight />
       <Tryit />
       <Abc />
