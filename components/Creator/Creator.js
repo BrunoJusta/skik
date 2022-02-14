@@ -10,6 +10,8 @@ const Creator = (props) => {
 
   return (
     <div className={styles.container}>
+      <h2 className={styles.title}>unmask the creators</h2>
+
       <div className={styles.masksHolder}>
         <div className={styles.creator}>
           <div className={styles.maskMaster}>

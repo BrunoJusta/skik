@@ -1,5 +1,6 @@
 import styles from "../../styles/Tryit.module.scss";
 import { useState, useEffect, useRef } from "react";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 const Tryit = (props) => {
   const [weight, setWeight] = useState("100");
@@ -49,6 +50,12 @@ const Tryit = (props) => {
           max="66"
           onChange={() => handleChange()}
         />
+      </div>
+      <div className={styles.trytag}>
+        <p>try it</p>
+        <p className={styles.arrow}>
+          <IoMdArrowDropdown />
+        </p>
       </div>
       <input
         className={styles.aintCool}

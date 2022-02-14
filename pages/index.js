@@ -6,6 +6,7 @@ import { FontWeight } from "../components/FontWeight";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Intro } from "../components/Intro";
+import { Mockups } from "../components/Mockups";
 import { Tag } from "../components/Tag";
 import { Tryit } from "../components/Tryit";
 import styles from "../styles/Home.module.scss";
@@ -25,7 +26,7 @@ export default function Home() {
         <FontWeight />
         <Tryit />
         <Abc />
-
+        <Mockups />
         <Creator />
       </div>
 
