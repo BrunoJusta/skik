@@ -140,4 +140,10 @@
       }
     }
   }
+
+  @media only screen and (max-width: 770px) {
+    .masksHolder {
+      gap: 6rem;
+    }
+  }
 }

@@ -106,8 +106,11 @@
       filter: url(#blur3);
     }
   }
-
   @media only screen and (max-width: 770px) {
+    .container {
+      margin-bottom: 100px;
+    }
+
     .controls {
       gap: 16px;
       flex-wrap: wrap;
@@ -115,5 +118,10 @@
     .supacontrols {
       flex-direction: column;
     }
+  }
+}
+@media only screen and (max-width: 770px) {
+  .container {
+    margin-bottom: 100px;
   }
 }

@@ -54,8 +54,15 @@
     .mockup4,
     .mockup5,
     .mockup6 {
-      width: 400px;
-      height: 200px;
+      width: 100%;
+      height: 300px;
     }
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .container {
+    gap: 0px;
+    margin-bottom: 100px;
   }
 }
