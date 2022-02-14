@@ -177,6 +177,7 @@
     @media only screen and (max-width: 770px) {
       .gallery {
         flex-wrap: wrap;
+        gap: 0rem;
       }
     }
   }
@@ -206,6 +207,8 @@
         height: 300px;
         background-image: url("../public/xpto.png");
         margin-bottom: 100px;
+      }
+      .gallery {
       }
     }
   }

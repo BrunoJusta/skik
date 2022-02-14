@@ -1,6 +1,7 @@
 import styles from "../../styles/Tryit.module.scss";
 import { useState, useEffect, useRef } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { motion } from "framer-motion";
 
 const Tryit = (props) => {
   const [weight, setWeight] = useState("100");
@@ -10,6 +11,34 @@ const Tryit = (props) => {
 
   const points = useRef();
   const ini = useRef();
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+      viewport: { once: true },
+    },
+  };
+
+  const input = {
+    hidden: { y: -10, opacity: 0, viewport: { once: true } },
+    show: {
+      y: 0,
+      opacity: 1,
+      viewport: { once: true },
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: -10, opacity: 0, viewport: { once: true } },
+    show: { y: 0, opacity: 1, viewport: { once: true } },
+  };
 
   const handleClick = (id) => {
     if (id === "100") {
@@ -31,17 +60,37 @@ const Tryit = (props) => {
   };
 
   return (
-    <div className={styles.tryit}>
-      <div className={styles.supacontrols}>
-        <div className={styles.controls}>
-          <button onClick={() => setWeight("100")} type="button">
+    <motion.div className={styles.tryit}>
+      <motion.div className={styles.supacontrols}>
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className={styles.controls}
+        >
+          <motion.button
+            variants={item}
+            onClick={() => setWeight("100")}
+            type="motion.button"
+          >
             Light
-          </button>
-          <button onClick={() => setWeight("400")}>Normal</button>
-          <button onClick={() => setWeight("600")}>Bold</button>
-          <button onClick={() => setWeight("800")}>Black</button>
-        </div>
-        <input
+          </motion.button>
+          <motion.button variants={item} onClick={() => setWeight("400")}>
+            Normal
+          </motion.button>
+          <motion.button variants={item} onClick={() => setWeight("600")}>
+            Bold
+          </motion.button>
+          <motion.button variants={item} onClick={() => setWeight("800")}>
+            Black
+          </motion.button>
+        </motion.div>
+        <motion.input
+          variants={input}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
           className={style.range}
           type="range"
           ref={points}
@@ -50,14 +99,18 @@ const Tryit = (props) => {
           max="66"
           onChange={() => handleChange()}
         />
-      </div>
-      <div className={styles.trytag}>
+      </motion.div>
+      <motion.div className={styles.trytag}>
         <p>try it</p>
         <p className={styles.arrow}>
           <IoMdArrowDropdown />
         </p>
-      </div>
-      <input
+      </motion.div>
+      <motion.input
+        variants={input}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
         className={styles.aintCool}
         ref={ini}
         style={{ fontWeight: weight, fontSize: `${pts}pt` }}
@@ -67,8 +120,8 @@ const Tryit = (props) => {
         placeholder="you aint cool if you aint skik"
         maxLength="30"
         size="10"
-      ></input>
-    </div>
+      ></motion.input>
+    </motion.div>
   );
 };
 

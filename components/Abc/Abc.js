@@ -1,5 +1,6 @@
 import styles from "../../styles/Abc.module.scss";
 import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 const Abc = (props) => {
   const [weight, setWeight] = useState("100");
@@ -9,12 +10,50 @@ const Abc = (props) => {
   const handleChange = () => {
     setPoints(points.current.value);
   };
+  const abc = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08,
+      },
+      viewport: { once: true },
+    },
+  };
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08,
+      },
+      viewport: { once: true },
+    },
+  };
+
+  const input = {
+    hidden: { y: -10, opacity: 0, viewport: { once: true } },
+    show: {
+      y: 0,
+      opacity: 1,
+      viewport: { once: true },
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: -10, opacity: 0, viewport: { once: true } },
+    show: { y: 0, opacity: 1, viewport: { once: true } },
+  };
   return (
-    <div
+    <motion.div
       className={styles.container}
       style={{ fontWeight: weight, fontSize: `${pts}pt` }}
     >
-      <div style={{ display: "none" }}>
+      <motion.div style={{ display: "none" }}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
@@ -44,15 +83,33 @@ const Abc = (props) => {
             </filter>
           </defs>
         </svg>
-      </div>
-      <div className={styles.supacontrols}>
-        <div className={styles.controls}>
-          <button onClick={() => setWeight("100")}>Light</button>
-          <button onClick={() => setWeight("400")}>Normal</button>
-          <button onClick={() => setWeight("600")}>Bold</button>
-          <button onClick={() => setWeight("800")}>Black</button>
-        </div>
-        <input
+      </motion.div>
+      <motion.div className={styles.supacontrols}>
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className={styles.controls}
+        >
+          <motion.button variants={item} onClick={() => setWeight("100")}>
+            Light
+          </motion.button>
+          <motion.button variants={item} onClick={() => setWeight("400")}>
+            Normal
+          </motion.button>
+          <motion.button variants={item} onClick={() => setWeight("600")}>
+            Bold
+          </motion.button>
+          <motion.button variants={item} onClick={() => setWeight("800")}>
+            Black
+          </motion.button>
+        </motion.div>
+        <motion.input
+          variants={input}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
           className={styles.range}
           type="range"
           ref={points}
@@ -61,37 +118,95 @@ const Abc = (props) => {
           max="40"
           onChange={() => handleChange()}
         />
-      </div>
+      </motion.div>
 
-      <div className={styles.section}>
-        <div className={styles.letter}>a</div>
-        <div className={styles.letter}>b</div>
-        <div className={styles.letter}>c</div>
-        <div className={styles.letter}>d</div>
-        <div className={styles.letter}>e</div>
-        <div className={styles.letter}>f</div>
-        <div className={styles.letter}>g</div>
-        <div className={styles.letter}>h</div>
-        <div className={styles.letter}>i</div>
-        <div className={styles.letter}>j</div>
-        <div className={styles.letter}>k</div>
-        <div className={styles.letter}>l</div>
-        <div className={styles.letter}>m</div>
-        <div className={styles.letter}>n</div>
-        <div className={styles.letter}>o</div>
-        <div className={styles.letter}>p</div>
-        <div className={styles.letter}>q</div>
-        <div className={styles.letter}>r</div>
-        <div className={styles.letter}>s</div>
-        <div className={styles.letter}>t</div>
-        <div className={styles.letter}>u</div>
-        <div className={styles.letter}>v</div>
-        <div className={styles.letter}>w</div>
-        <div className={styles.letter}>x</div>
-        <div className={styles.letter}>y</div>
-        <div className={styles.letter}>z</div>
-      </div>
-    </div>
+      <motion.div
+        variants={abc}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className={styles.section}
+      >
+        <motion.div variants={item} className={styles.letter}>
+          a
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          b
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          c
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          d
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          e
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          f
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          g
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          h
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          i
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          j
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          k
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          l
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          m
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          n
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          o
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          p
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          q
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          r
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          s
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          t
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          u
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          v
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          w
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          x
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          y
+        </motion.div>
+        <motion.div variants={item} className={styles.letter}>
+          z
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 

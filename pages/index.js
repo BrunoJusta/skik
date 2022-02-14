@@ -29,7 +29,6 @@ export default function Home() {
         <Mockups />
         <Creator />
       </div>
-
       <Footer />
     </div>
   );

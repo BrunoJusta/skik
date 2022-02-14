@@ -1,55 +1,99 @@
 import styles from "../../styles/Intro.module.scss";
 import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 const Intro = (props) => {
-  useEffect(() => {}, []);
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+      viewport: { once: true },
+    },
+  };
+
+  const item = {
+    hidden: { y: -10, opacity: 0, viewport: { once: true } },
+    show: { y: 0, opacity: 1, viewport: { once: true } },
+  };
+
+  const img = {
+    hidden: { opacity: 0, viewport: { once: true } },
+    show: { opacity: 1, viewport: { once: true } },
+  };
 
   return (
     <div className={styles.container}>
-      <div className={styles.firstSection}>
+      <motion.div
+        className={styles.firstSection}
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
         <div className={styles.text}>
           <span className={styles.king} />
-          <p>
+          <motion.p variants={item}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book. It has survived not
             only five centuries, but also the leap into electronic typesetting.
-          </p>
-          <p>
+          </motion.p>
+          <motion.p variants={item}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
             ever since the 1500s..
-          </p>
-          <p>
+          </motion.p>
+          <motion.p variants={item}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled.
-          </p>
+          </motion.p>
         </div>
-        <div className={styles.gallery}>
+        <motion.div
+          className={styles.gallery}
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
           <div className={styles.row}>
-            <div className={styles.image1}></div>
-            <div className={styles.image2}></div>
+            <motion.div variants={img} className={styles.image1}></motion.div>
+            <motion.div variants={img} className={styles.image2}></motion.div>
           </div>
           <div className={styles.row}>
-            <div className={styles.image3}></div>
-            <div className={styles.image4}></div>
+            <motion.div variants={img} className={styles.image3}></motion.div>
+            <motion.div variants={img} className={styles.image4}></motion.div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
       <div className={styles.secondSection}>
         <h2>optical ajustments</h2>
-        <div className={styles.gallery}>
-          <div className={styles.ajust1}></div>
-          <div className={styles.ajust2}></div>
-          <div className={styles.ajust3}></div>
-        </div>
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className={styles.gallery}
+        >
+          <motion.div variants={item} className={styles.ajust1}></motion.div>
+          <motion.div variants={item} className={styles.ajust2}></motion.div>
+          <motion.div variants={item} className={styles.ajust3}></motion.div>
+        </motion.div>
       </div>
       <div className={styles.thirdSection}>
         <h2>dimensions</h2>
-        <div className={styles.xsize}></div>
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className={styles.xsize}
+        ></motion.div>
         <h2>weights</h2>
       </div>
     </div>
