@@ -247,7 +247,7 @@ input[type="range"]::-ms-thumb {
   height: 24px;
   width: 24px;
   border-radius: 50px;
-  background: #f0d453;
+  background: #282828;
   cursor: pointer;
 }
 input[type="range"]:focus::-ms-fill-lower {
