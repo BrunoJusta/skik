@@ -108,7 +108,7 @@ const Abc = (props) => {
           </motion.button>
         </motion.div>
         <div className={styles.sliders}>
-          <label for="we">Weight</label>
+          <label htmlFor="we">Weight</label>
           <motion.input
             id="we"
             variants={input}
@@ -125,8 +125,9 @@ const Abc = (props) => {
         </div>
 
         <div className={styles.sliders}>
-          <label for="we">Size (pt)</label>
+          <label htmlFor="wes">Size (pt)</label>
           <motion.input
+            id="wes"
             variants={input}
             initial="hidden"
             whileInView="show"
