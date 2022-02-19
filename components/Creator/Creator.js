@@ -43,7 +43,7 @@ const Creator = (props) => {
             <motion.div className={styles.justa}></motion.div>
           </motion.div>
           <motion.div className={styles.description}>
-            <h3>Bruno Justa</h3>
+            <h3>bruno justa</h3>
             <motion.div className={styles.social}>
               <p>
                 <AiFillBehanceSquare />
@@ -66,7 +66,7 @@ const Creator = (props) => {
             <motion.div className={styles.joao}></motion.div>
           </motion.div>
           <motion.div className={styles.description}>
-            <h3>João Vasconcelos</h3>
+            <h3>joao vasconcelos</h3>
             <motion.div className={styles.social}>
               <p>
                 <AiFillBehanceSquare />

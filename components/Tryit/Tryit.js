@@ -10,6 +10,7 @@ const Tryit = (props) => {
   const [style, setStyle] = useState("");
 
   const points = useRef();
+  const weights = useRef();
   const ini = useRef();
 
   const container = {
@@ -40,23 +41,11 @@ const Tryit = (props) => {
     show: { y: 0, opacity: 1, viewport: { once: true } },
   };
 
-  const handleClick = (id) => {
-    if (id === "100") {
-      setWeight("100");
-    }
-    if (id === "400") {
-      setWeight("200");
-    }
-    if (id === "600") {
-      setWeight("600");
-    }
-    if (id === "800") {
-      setWeight("800");
-    }
-  };
-
   const handleChange = () => {
     setPoints(points.current.value);
+  };
+  const handleChange2 = () => {
+    setWeight(weights.current.value);
   };
 
   return (
@@ -74,31 +63,50 @@ const Tryit = (props) => {
             onClick={() => setWeight("100")}
             type="motion.button"
           >
-            Light
+            thin
           </motion.button>
-          <motion.button variants={item} onClick={() => setWeight("400")}>
-            Normal
+          <motion.button variants={item} onClick={() => setWeight("300")}>
+            regular
           </motion.button>
-          <motion.button variants={item} onClick={() => setWeight("600")}>
-            Bold
+          <motion.button variants={item} onClick={() => setWeight("500")}>
+            semibold
           </motion.button>
-          <motion.button variants={item} onClick={() => setWeight("800")}>
-            Black
+          <motion.button variants={item} onClick={() => setWeight("700")}>
+            bold
           </motion.button>
         </motion.div>
-        <motion.input
-          variants={input}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className={style.range}
-          type="range"
-          ref={points}
-          name="pt"
-          min="12"
-          max="66"
-          onChange={() => handleChange()}
-        />
+        <div className={styles.sliders}>
+          <label for="we">Weight</label>
+          <motion.input
+            id="we"
+            variants={input}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            type="range"
+            ref={weights}
+            name="pt"
+            min="100"
+            max="700"
+            onChange={() => handleChange2()}
+          />
+        </div>
+
+        <div className={styles.sliders}>
+          <label for="we">Size (pt)</label>
+          <motion.input
+            variants={input}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            type="range"
+            ref={points}
+            name="pt"
+            min="12"
+            max="66"
+            onChange={() => handleChange()}
+          />
+        </div>
       </motion.div>
       <motion.div className={styles.trytag}>
         <p>try it</p>
@@ -113,7 +121,10 @@ const Tryit = (props) => {
         viewport={{ once: true }}
         className={styles.aintCool}
         ref={ini}
-        style={{ fontWeight: weight, fontSize: `${pts}pt` }}
+        style={{
+          fontVariationSettings: `"wght" ${weight}`,
+          fontSize: `${pts}pt`,
+        }}
         type="text"
         name="skik"
         autoComplete="off"

@@ -6,9 +6,14 @@ const Abc = (props) => {
   const [weight, setWeight] = useState("100");
   const [pts, setPoints] = useState("40");
   const points = useRef();
+  const weights = useRef();
+
   const ini = useRef();
   const handleChange = () => {
     setPoints(points.current.value);
+  };
+  const handleChange2 = () => {
+    setWeight(weights.current.value);
   };
   const abc = {
     hidden: { opacity: 0 },
@@ -49,10 +54,7 @@ const Abc = (props) => {
     show: { y: 0, opacity: 1, viewport: { once: true } },
   };
   return (
-    <motion.div
-      className={styles.container}
-      style={{ fontWeight: weight, fontSize: `${pts}pt` }}
-    >
+    <motion.div className={styles.container}>
       <motion.div style={{ display: "none" }}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -93,31 +95,50 @@ const Abc = (props) => {
           className={styles.controls}
         >
           <motion.button variants={item} onClick={() => setWeight("100")}>
-            Light
+            thin
           </motion.button>
           <motion.button variants={item} onClick={() => setWeight("400")}>
-            Normal
+            regular
           </motion.button>
           <motion.button variants={item} onClick={() => setWeight("600")}>
-            Bold
+            semibold
           </motion.button>
           <motion.button variants={item} onClick={() => setWeight("800")}>
-            Black
+            bold
           </motion.button>
         </motion.div>
-        <motion.input
-          variants={input}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className={styles.range}
-          type="range"
-          ref={points}
-          name="pt"
-          min="12"
-          max="40"
-          onChange={() => handleChange()}
-        />
+        <div className={styles.sliders}>
+          <label for="we">Weight</label>
+          <motion.input
+            id="we"
+            variants={input}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            type="range"
+            ref={weights}
+            name="pt"
+            min="100"
+            max="700"
+            onChange={() => handleChange2()}
+          />
+        </div>
+
+        <div className={styles.sliders}>
+          <label for="we">Size (pt)</label>
+          <motion.input
+            variants={input}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            type="range"
+            ref={points}
+            name="pt"
+            min="12"
+            max="40"
+            onChange={() => handleChange()}
+          />
+        </div>
       </motion.div>
 
       <motion.div
@@ -126,6 +147,10 @@ const Abc = (props) => {
         whileInView="show"
         viewport={{ once: true }}
         className={styles.section}
+        style={{
+          fontVariationSettings: `"wght" ${weight}`,
+          fontSize: `${pts}pt`,
+        }}
       >
         <motion.div variants={item} className={styles.letter}>
           a
