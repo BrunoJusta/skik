@@ -45,15 +45,18 @@ const Creator = (props) => {
           <motion.div className={styles.description}>
             <h3>bruno justa</h3>
             <motion.div className={styles.social}>
-              <p>
+              <a href="https://www.behance.net/brunojusta98" target="_blank">
                 <AiFillBehanceSquare />
-              </p>
-              <p>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/bruno-justa98/"
+                target="_blank"
+              >
                 <AiFillLinkedin />
-              </p>
-              <p>
+              </a>
+              <a href="instagram.com/justadraws/" target="_blank">
                 <AiFillInstagram />
-              </p>
+              </a>
             </motion.div>
           </motion.div>
         </motion.div>
@@ -68,15 +71,15 @@ const Creator = (props) => {
           <motion.div className={styles.description}>
             <h3>joao vasconcelos</h3>
             <motion.div className={styles.social}>
-              <p>
+              <a href="https://www.behance.net/j0ny_" target="_blank">
                 <AiFillBehanceSquare />
-              </p>
-              <p>
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank">
                 <AiFillLinkedin />
-              </p>
-              <p>
+              </a>
+              <a href="https://www.instagram.com/who_dat_j0ny/" target="_blank">
                 <AiFillInstagram />
-              </p>
+              </a>
             </motion.div>
           </motion.div>
         </motion.div>
