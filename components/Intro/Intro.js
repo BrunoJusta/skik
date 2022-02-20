@@ -44,7 +44,7 @@ const Intro = (props) => {
             The skik font family was created for titles and branding displays.
             Skik is uniquee and for its construction was used a perfect circle
             that can be seen more prominent in letters like o and a. Some
-            optical adjustments were also made to achive authenticity.
+            optical adjustments were also made to achieve authenticity.
           </motion.p>
           <motion.p variants={item}>
             Skik is a variable font with only one axis, this being the weight.
