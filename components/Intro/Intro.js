@@ -35,23 +35,21 @@ const Intro = (props) => {
       >
         <div className={styles.text}>
           <span className={styles.king} />
-          <motion.p variants={item} style={{ textTransform: "lowercase" }}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting.
+          <motion.p variants={item}>
+            This font was created in 2022 and was part of an academic project of
+            the master's degree in Digital Design at the Polytechnic Institute
+            of Cavado and Ave.
           </motion.p>
-          <motion.p variants={item} style={{ textTransform: "lowercase" }}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s..
+          <motion.p variants={item}>
+            The skik font family was created for titles and branding displays.
+            Skik is uniquee and for it's construction was used a perfect circle
+            that can be seen more prominent in letters like o and a. Some
+            optical adjustments were also made to achive authenticity.
           </motion.p>
-          <motion.p variants={item} style={{ textTransform: "lowercase" }}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled.
+          <motion.p variants={item}>
+            Skik is a variable font with only one axis, this being the weight.
+            It’s a display font, non-serif, lower case with some specific
+            optical adjustments.
           </motion.p>
         </div>
         <motion.div
