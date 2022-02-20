@@ -60,7 +60,7 @@ const Creator = (props) => {
                 <AiFillLinkedin />
               </a>
               <a
-                href="instagram.com/justadraws/"
+                href="https://www.instagram.com/justadraws/"
                 target="_blank"
                 rel="noreferrer"
               >
