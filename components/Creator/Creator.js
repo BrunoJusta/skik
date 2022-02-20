@@ -45,16 +45,25 @@ const Creator = (props) => {
           <motion.div className={styles.description}>
             <h3>bruno justa</h3>
             <motion.div className={styles.social}>
-              <a href="https://www.behance.net/brunojusta98" target="_blank">
+              <a
+                href="https://www.behance.net/brunojusta98"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <AiFillBehanceSquare />
               </a>
               <a
                 href="https://www.linkedin.com/in/bruno-justa98/"
                 target="_blank"
+                rel="noreferrer"
               >
                 <AiFillLinkedin />
               </a>
-              <a href="instagram.com/justadraws/" target="_blank">
+              <a
+                href="instagram.com/justadraws/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <AiFillInstagram />
               </a>
             </motion.div>
@@ -71,13 +80,25 @@ const Creator = (props) => {
           <motion.div className={styles.description}>
             <h3>joao vasconcelos</h3>
             <motion.div className={styles.social}>
-              <a href="https://www.behance.net/j0ny_" target="_blank">
+              <a
+                href="https://www.behance.net/j0ny_"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <AiFillBehanceSquare />
               </a>
-              <a href="https://www.linkedin.com/" target="_blank">
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <AiFillLinkedin />
               </a>
-              <a href="https://www.instagram.com/who_dat_j0ny/" target="_blank">
+              <a
+                href="https://www.instagram.com/who_dat_j0ny/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <AiFillInstagram />
               </a>
             </motion.div>
