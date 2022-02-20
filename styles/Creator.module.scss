@@ -92,7 +92,16 @@
           .maskmask {
             width: 150px;
             height: 200px;
-            background-image: url("../public/mask.png");
+            background-image: url("../public/mask1.svg");
+            background-size: cover;
+            transition: all 800ms cubic-bezier(0.645, 0.045, 0.335, 1);
+            animation: slide-top 4s cubic-bezier(0.645, 0.045, 0.335, 1)
+              infinite alternate-reverse both;
+          }
+          .maskmask2 {
+            width: 150px;
+            height: 200px;
+            background-image: url("../public/mask2.svg");
             background-size: cover;
             transition: all 800ms cubic-bezier(0.645, 0.045, 0.335, 1);
             animation: slide-top 4s cubic-bezier(0.645, 0.045, 0.335, 1)

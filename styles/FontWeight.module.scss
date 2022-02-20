@@ -8,14 +8,15 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 
   h3 {
     font-size: 6rem;
     padding-bottom: 16px;
   }
   p {
-    font-size: 1.5rem;
+    font-family: Poppins;
+    font-size: 1rem;
   }
 
   .light {
@@ -27,6 +28,9 @@
     align-items: center;
     font-variation-settings: "wght" 100;
     background-color: white;
+    p {
+      font-weight: 100;
+    }
   }
 
   .normal {
@@ -36,9 +40,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-weight: 400;
     background-color: white;
     font-variation-settings: "wght" 300;
+    p {
+      font-weight: 300;
+    }
   }
 
   .bold {
@@ -49,9 +55,11 @@
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    font-weight: 600;
     background-color: white;
     font-variation-settings: "wght" 500;
+    p {
+      font-weight: 500;
+    }
   }
 
   .black {
@@ -62,8 +70,10 @@
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    font-weight: 900;
     background-color: white;
     font-variation-settings: "wght" 700;
+    p {
+      font-weight: 700;
+    }
   }
 }

@@ -6,7 +6,7 @@
   width: 100%;
   max-width: 1280px;
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
   flex-wrap: wrap;
 
   .supacontrols {
@@ -95,10 +95,10 @@
 
   @keyframes slide-top2 {
     0% {
-      transform: translateY(80%) rotate(-12deg);
+      transform: translateY(140%) rotate(-12deg);
     }
     100% {
-      transform: translateY(50%) rotate(-4deg);
+      transform: translateY(160%) rotate(-4deg);
     }
   }
 

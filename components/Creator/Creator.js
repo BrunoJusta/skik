@@ -61,7 +61,7 @@ const Creator = (props) => {
           <motion.div className={styles.maskMaster}>
             <motion.div className={styles.yellowBorder}></motion.div>
             <motion.div className={styles.mask}>
-              <motion.div className={styles.maskmask}></motion.div>
+              <motion.div className={styles.maskmask2}></motion.div>
             </motion.div>
             <motion.div className={styles.joao}></motion.div>
           </motion.div>

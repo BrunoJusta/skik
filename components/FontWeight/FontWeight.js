@@ -29,19 +29,19 @@ const FontWeight = (props) => {
     >
       <motion.div variants={item} className={styles.light}>
         <h3>abc</h3>
-        <p>skik thin</p>
+        <p>thin</p>
       </motion.div>
       <motion.div variants={item} className={styles.normal}>
         <h3>abc</h3>
-        <p>skik regular</p>
+        <p>regular</p>
       </motion.div>
       <motion.div variants={item} className={styles.bold}>
         <h3>abc</h3>
-        <p>skik semibold</p>
+        <p>semibold</p>
       </motion.div>
       <motion.div variants={item} className={styles.black}>
         <h3>abc</h3>
-        <p>skik bold</p>
+        <p>bold</p>
       </motion.div>
     </motion.div>
   );
